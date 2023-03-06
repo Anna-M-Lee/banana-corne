@@ -83,7 +83,7 @@
                                      &trans    &kp F5      &kp F6     &kp F7     &kp F8     &trans                   &trans    &kp LEFT   &kp DOWN    &kp UP    &kp RIGHT   &trans
                                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤             ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                                 //│          │   F9     │  F10     │  F11     │  F12     │          │             │          │  PGDWN   │          │          │   END    │          │
-                                     &trans     &kp F9      &kp F10   &kp F11     &kp F12   &trans                   &trans     &kp PGDWN  &trans     &trans    &kp END     &trans
+                                     &trans     &trans      &trans   &trans     &trans   &trans                   &trans     &trans  &trans     &trans    &trans     &trans
                                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤──────────┤             ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                                                      &kp LGUI   &trans     &kp SPACE                &kp BSPC    &trans     &kp RALT
                                 //                                 ╰──────────┴──────────┴──────────╯             ╰──────────┴──────────┴──────────╯
