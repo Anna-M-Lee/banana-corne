@@ -8,17 +8,17 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define QWERTY 0
-#define NUMBER 1
-#define SYMBOL 2
-#define FUNCTION 3
+#define BASE 0
+#define NUM 1
+#define SYM 2
+#define FUNC 3
 
 / {
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
-                        label = "QWERTY";
+                        label = "BASE";
                         bindings = <
                                 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮             ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
                                 //│  ESC     │  Q       │  W       │  E       │  R       │  T       │             │  Y       │  U       │  I       │  O       │  P       │  BKSP    │
@@ -30,13 +30,13 @@
                                 //│  SHIFT   │  Z       │  X       │  C       │  V       │  B       │             │  N       │  M       │  ,       │  .       │  /       │ ENTER    │
                                      &kp LSHFT  &kp Z      &kp X      &kp C      &kp V      &kp B                    &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH  &kp RET
                                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤──────────┤             ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                                  &kp LGUI  &kp LCTRL  &lt NUMBER SPACE     &lt SYMBOL BSPC  &lt FUNCTION RET  &kp RALT
+                                                                  &kp LGUI  &kp LCTRL  &lt NUM SPACE     &lt SYM BSPC  &lt FUNC RET  &kp RALT
                                 //                                 ╰──────────┴──────────┴──────────╯             ╰──────────┴──────────┴──────────╯
                         >;
                 };
 
                 number_layer {
-                        label = "NUMBER";
+                        label = "NUM";
                         bindings = <
                                 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮             ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
                                 //│          │  1       │  2       │  3       │  4       │  5       │             │  6       │  7       │  8       │  9       │  0       │ BKSP     │
@@ -54,7 +54,7 @@
                 };
 
                 symbol_layer {
-                        label = "SYMBOL";
+                        label = "SYM";
                         bindings = <
                                 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮             ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
                                 //│  `       │  !       │  @       │  #       │  $       │  %       │             │  ^       │  &       │  *       │  (       │  )       │ BKSP     │
@@ -73,7 +73,7 @@
 
                 
                 function_layer {
-                        label = "FUNCTION";
+                        label = "FUNC";
                         bindings = <
                                 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮             ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
                                 //│          │   F1     │  F2      │  F3      │  F4      │          │             │          │  PGUP    │          │          │  HOME    │ DEL      │
