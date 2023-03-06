@@ -42,11 +42,11 @@
                                 //│          │  1       │  2       │  3       │  4       │  5       │             │  6       │  7       │  8       │  9       │  0       │ BKSP     │
                                      &trans     &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                   &kp N6     &kp N7     &kp N8     &kp N9     &kp N0    &kp BSPC
                                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤             ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                                //│  BTCLR   │  BT1     │  BT2     │  BT3     │sharex cap│          │             │  *       │  4       │  5       │  6       │  +       │ =        │
-                                &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &kp LC(UP) &trans              &kp KP_MULTIPLY &kp N4    &kp N5      &kp N6     &kp PLUS  &kp EQUAL                                                                 
+                                //│  BTCLR   │  BT1     │  BT2     │  BT3     │          │          │             │  *       │  4       │  5       │  6       │  +       │ =        │
+                                &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL &trans       &trans              &kp KP_MULTIPLY &kp N4    &kp N5      &kp N6     &kp PLUS  &kp EQUAL
                                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤             ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                                //│          │          │          │          │sharex gif│          │             │  /       │  1       │  2       │  3       │  -       │          │
-                                     &trans     &trans      &trans   &trans    &kp LC(DOWN) &trans                  &kp FSLH    &kp N1     &kp N2      &kp N3    &kp MINUS  &trans
+                                //│          │          │          │          │          │          │             │  /       │  1       │  2       │  3       │  -       │          │
+                                     &trans     &trans      &trans   &trans    &trans       &trans                  &kp FSLH    &kp N1     &kp N2      &kp N3    &kp MINUS  &trans
                                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤──────────┤             ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                                                      &kp LGUI   &trans    &kp SPACE                 &kp BSPC    &kp DOT    &kp N0
                                 //                                 ╰──────────┴──────────┴──────────╯             ╰──────────┴──────────┴──────────╯
@@ -83,7 +83,7 @@
                                      &trans    &kp F5      &kp F6     &kp F7     &kp F8     &trans                   &trans    &kp LEFT   &kp DOWN    &kp UP    &kp RIGHT   &trans
                                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤             ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                                 //│          │   F9     │  F10     │  F11     │  F12     │          │             │          │  PGDWN   │          │          │   END    │          │
-                                     &trans     &kp F9      &kp F10   &kp F11     &kp F12   &trans                   &trans     &kp PGDWN  &trans     &trans      &kp END   &trans
+                                     &trans     &kp F9      &kp F10   &kp F11     &kp F12   &trans                   &trans     &kp PGDWN  &trans     &trans    &kp END     &trans
                                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤──────────┤             ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                                                      &kp LGUI   &trans     &kp SPACE                &kp BSPC    &trans     &kp RALT
                                 //                                 ╰──────────┴──────────┴──────────╯             ╰──────────┴──────────┴──────────╯
