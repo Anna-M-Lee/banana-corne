@@ -27,10 +27,10 @@
                                 //│  TAB     │  A       │  S       │  D       │  F       │  G       │             │  H       │  J       │  K       │  L       │  ;       │ '        │
                                      &kp TAB  &kp A      &kp S      &kp D      &kp F      &kp G                    &kp H      &kp J      &kp K      &kp L      &kp SEMI  &kp SQT
                                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤             ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                                //│  SHIFT   │  Z       │  X       │  C       │  V       │  B       │             │  N       │  M       │  ,       │  .       │  /       │ ENTER    │
-                                     &kp LSHFT  &kp Z      &kp X      &kp C      &kp V      &kp B                    &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH  &kp RET
+                                //│  SHIFT   │  Z       │  X       │  C       │  V       │  B       │             │  N       │  M       │  ,       │  .       │  /       │ ALT      │
+                                     &kp LSHFT  &kp Z      &kp X      &kp C      &kp V      &kp B                    &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH  &kp RALT
                                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤──────────┤             ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                                  &kp LGUI  &kp LCTRL  &lt NUM SPACE     &lt SYM BSPC  &lt FUNC RET  &kp RALT
+                                                                  &kp LGUI  &kp LCTRL  &lt NUM SPACE          &lt SYM BSPC  &lt FUNC RET  &kp LSHFT
                                 //                                 ╰──────────┴──────────┴──────────╯             ╰──────────┴──────────┴──────────╯
                         >;
                 };
@@ -40,13 +40,13 @@
                         bindings = <
                                 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮             ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
                                 //│          │  1       │  2       │  3       │  4       │  5       │             │  6       │  7       │  8       │  9       │  0       │ BKSP     │
-                                     &trans     &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                   &kp N6     &kp N7     &kp N8     &kp N9     &kp N0    &kp BSPC
+                                    &trans     &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                   &kp N6     &kp N7     &kp N8     &kp N9     &kp N0    &kp BSPC
                                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤             ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                                //│  BTCLR   │  BT1     │  BT2     │  BT3     │sharex cap│          │             │  *       │  4       │  5       │  6       │  +       │ =        │
-                                &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &kp LC(UP) &trans              &kp KP_MULTIPLY &kp N4    &kp N5      &kp N6     &kp PLUS  &kp EQUAL
+                                //│          │  LSHFT   │   LCTRL  │   LALT   │   LGUI   │          │             │  *       │  4       │  5       │  6       │  +       │ =        │
+                                     &trans   &kp LSHFT  &kp LCTRL   &kp LALT   &kp LGUI     &trans              &kp KP_MULTIPLY &kp N4    &kp N5      &kp N6     &kp PLUS  &kp EQUAL
                                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤             ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                                //│          │          │          │          │sharex gif│          │             │  /       │  1       │  2       │  3       │  -       │          │
-                                     &trans     &trans      &trans   &trans    &kp LC(DOWN) &trans                  &kp FSLH    &kp N1     &kp N2      &kp N3    &kp MINUS  &trans
+                                //│          │          │          │          │  console │    F2    │             │  /       │  1       │  2       │  3       │  -       │          │
+                                   &trans     &trans      &trans      &tran      &kp F12    &kp F2                  &kp FSLH    &kp N1     &kp N2      &kp N3    &kp MINUS  &trans
                                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤──────────┤             ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
                                                                      &kp LGUI   &trans    &kp SPACE                 &kp BSPC    &kp DOT    &kp N0
                                 //                                 ╰──────────┴──────────┴──────────╯             ╰──────────┴──────────┴──────────╯
@@ -66,7 +66,7 @@
                                 //│          │          │          │          │          │          │             │          │          │          │  _       │  =       │          │
                                       &trans     &trans    &trans     &trans    &trans      &trans                   &trans     &trans     &trans     &kp UNDER  &kp EQUAL &trans
                                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤──────────┤             ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                                     &kp LGUI   &trans     &kp SPACE                &kp BSPC    &trans     &kp RALT
+                                                                     &kp LGUI   &trans     &kp SPACE                &kp BSPC    &trans    &kp LSHFT
                                 //                                 ╰──────────┴──────────┴──────────╯             ╰──────────┴──────────┴──────────╯
                         >;
                 };
@@ -76,16 +76,16 @@
                         label = "FUNC";
                         bindings = <
                                 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮             ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-                                //│          │   F1     │  F2      │  F3      │  F4      │          │             │          │  PGUP    │          │          │  HOME    │ DEL      │
-                                     &trans     &kp F1     &kp F2     &kp F3      &kp F4    &trans                   &trans     &kp PG_UP   &trans    &trans     &kp HOME     &kp DEL
+                                //│  BTCLR   │          │  prev    │   next   │play/pause│          │             │          │  PGUP    │          │          │  HOME    │ DEL      │
+                                &bt BT_CLR     &trans    &kp C_PREV &kp C_NEXT  &kp C_PP  &trans                   &trans     &kp PG_UP   &trans    &trans     &kp HOME     &kp DEL
                                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤             ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                                //│          │   F5     │  F6      │  F7      │  F8      │          │             │          │  LFT     │  DWN     │  UP      │  RGT     │          │
-                                     &trans    &kp F5      &kp F6     &kp F7     &kp F8     &trans                   &trans    &kp LEFT   &kp DOWN    &kp UP    &kp RIGHT   &trans
+                                //│  BT1     │  LSHFT   │   LCTRL  │   LALT   │   LGUI   │screen cap│             │          │  LFT     │  DWN     │  UP      │  RGT     │          │
+                                &bt BT_SEL 0  &kp LSHFT  &kp LCTRL   &kp LALT   &kp LGUI   &kp LC(UP)                &trans    &kp LEFT   &kp DOWN    &kp UP    &kp RIGHT   &trans
                                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤             ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                                //│          │   F9     │  F10     │  F11     │  F12     │          │             │          │  PGDWN   │          │          │   END    │          │
-                                     &trans     &kp F9      &kp F10   &kp F11     &kp F12   &trans                   &trans     &kp PG_DN  &trans     &trans    &kp END     &trans
+                                //│   BT1    │          │          │          │          │   gif    │             │          │  PGDWN   │          │          │   END    │          │
+                                &bt BT_SEL 1     &trans      &trans   &trans   &trans    &kp LC(DOWN)              &trans     &kp PG_DN  &trans     &trans    &kp END     &trans
                                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤──────────┤             ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                                     &kp LGUI   &trans     &kp SPACE                &kp BSPC    &trans     &kp RALT
+                                                                     &kp LGUI   &trans     &kp SPACE                &kp BSPC    &trans     &kp LSHFT
                                 //                                 ╰──────────┴──────────┴──────────╯             ╰──────────┴──────────┴──────────╯
                         >;
                 };
