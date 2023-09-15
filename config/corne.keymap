@@ -12,7 +12,6 @@
 #define NUM 1
 #define SYM 2
 #define FUNC 3
-#define GAME 4
 
 / {
         keymap {
@@ -31,7 +30,7 @@
                                 //│  SHIFT   │  Z       │  X       │  C       │  V       │  B       │             │  N       │  M       │  ,       │  .       │  /       │ ALT      │
                                      &kp LSHFT  &kp Z      &kp X      &kp C      &kp V      &kp B                    &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH  &kp RALT
                                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤──────────┤             ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                                  &kp LGUI  &kp LCTRL  &lt NUM SPACE          &lt SYM BSPC  &lt FUNC RET  &kp LSHFT
+                                                                  &kp LALT  &kp LCTRL  &lt NUM SPACE          &lt SYM BSPC  &lt FUNC RET  &kp LGUI
                                 //                                 ╰──────────┴──────────┴──────────╯             ╰──────────┴──────────┴──────────╯
                         >;
                 };
@@ -49,7 +48,7 @@
                                 //│          │          │          │          │  console │    F2    │             │  /       │  1       │  2       │  3       │  -       │          │
                                    &trans     &trans      &trans      &trans      &kp F12    &kp F2                  &kp FSLH    &kp N1     &kp N2      &kp N3    &kp MINUS  &trans
                                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤──────────┤             ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                                     &kp LGUI   &trans    &kp SPACE                 &kp BSPC    &kp DOT    &kp N0
+                                                                     &kp LALT   &trans    &kp SPACE                 &kp BSPC    &kp DOT    &kp N0
                                 //                                 ╰──────────┴──────────┴──────────╯             ╰──────────┴──────────┴──────────╯
                         >;
                 };
@@ -67,7 +66,7 @@
                                 //│          │          │          │          │          │          │             │          │          │          │  _       │  =       │          │
                                       &trans     &trans    &trans     &trans    &trans      &trans                   &trans     &trans     &trans     &kp UNDER  &kp EQUAL &trans
                                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤──────────┤             ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                                     &kp LGUI   &trans     &kp SPACE                &kp BSPC    &trans    &kp LSHFT
+                                                                     &kp LALT   &trans     &kp SPACE                &kp BSPC    &trans    &kp LGUI
                                 //                                 ╰──────────┴──────────┴──────────╯             ╰──────────┴──────────┴──────────╯
                         >;
                 };
@@ -77,38 +76,19 @@
                         label = "FUNC";
                         bindings = <
                                 //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮             ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-                                //│   BTCLR  │          │  prev    │   next   │play/pause│GAME LAYER│             │          │  PGUP    │          │          │  HOME    │ DEL      │
-                                  &bt BT_CLR    &trans    &kp C_PREV &kp C_NEXT  &kp C_PP  &tog GAME                   &trans  &kp PG_UP   &trans    &trans     &kp HOME     &kp DEL
+                                //│   BTCLR  │          │  prev    │   next   │play/pause│          │             │          │  PGUP    │          │          │  HOME    │ DEL      │
+                                  &bt BT_CLR    &trans    &kp C_PREV &kp C_NEXT  &kp C_PP  &trans                   &trans  &kp PG_UP   &trans    &trans     &kp HOME     &kp DEL
                                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤             ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                                //│  BT1     │  LSHFT   │   LCTRL  │   LALT   │   LGUI   │screen cap│             │          │  LFT     │  DWN     │  UP      │  RGT     │          │
-                                &bt BT_SEL 0  &kp LSHFT  &kp LCTRL   &kp LALT   &kp LGUI   &kp LC(UP)                &trans    &kp LEFT   &kp DOWN    &kp UP    &kp RIGHT   &trans
+                                //│  BT1     │  LSHFT   │   LCTRL  │   LALT   │   LGUI   │          │             │          │  LFT     │  DWN     │  UP      │  RGT     │          │
+                                &bt BT_SEL 0  &kp LSHFT  &kp LCTRL   &kp LALT   &kp LGUI   &trans                &trans    &kp LEFT   &kp DOWN    &kp UP    &kp RIGHT   &trans
                                 //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤             ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                                //│  BT2     │          │          │          │          │   gif    │             │          │  PGDWN   │          │          │   END    │          │
-                                 &bt BT_SEL 1   &trans    &trans   &trans   &trans    &kp LC(DOWN)                 &trans     &kp PG_DN  &trans     &trans    &kp END     &trans
+                                //│  BT2     │          │          │          │          │          │             │          │  PGDWN   │          │          │   END    │          │
+                                 &bt BT_SEL 1   &trans    &trans   &trans   &trans    &trans                 &trans     &kp PG_DN  &trans     &trans    &kp END     &trans
                                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤──────────┤             ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                                     &kp LGUI   &trans     &kp SPACE                &kp BSPC    &trans     &kp LSHFT
+                                                                    &kp LALT   &trans     &kp SPACE                &kp BSPC    &trans     &kp LGUI
                                 //                                 ╰──────────┴──────────┴──────────╯             ╰──────────┴──────────┴──────────╯
                         >;
                 };
-
-                game_layer {
-                        label = "GAME";
-                        bindings = <
-                                //╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮             ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-                                //│  ESC     │  Q       │  W       │  E       │  R       │  T       │             │GAME LAYER│          │          │          │          │          │
-                                     &kp ESC    &kp Q      &kp W      &kp E      &kp R      &kp T                  &tog GAME   &trans      &trans      &trans     &trans    &trans
-                                //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤             ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                                //│  TAB     │  A       │  S       │  D       │  F       │  G       │             │          │          │          │          │          │          │
-                                     &kp TAB  &kp A      &kp S      &kp D      &kp F      &kp G                      &trans     &trans      &trans     &trans    &trans  &trans
-                                //├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤             ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                                //│  SHIFT   │  Z       │  X       │  C       │  V       │  B       │             │          │          │          │          │          │          │
-                                     &kp LSHFT  &kp Z      &kp X      &kp C      &kp V      &kp B                    &trans     &trans     &trans     &trans    &trans     &trans
-                                //╰──────────┴──────────┴──────────┼──────────┼──────────┤──────────┤             ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                                    &lt NUM M   &kp LCTRL   &kp SPACE                  &trans     &trans     &trans
-                                //                                 ╰──────────┴──────────┴──────────╯             ╰──────────┴──────────┴──────────╯
-                        >;
-                };
-
 
         };
 };
